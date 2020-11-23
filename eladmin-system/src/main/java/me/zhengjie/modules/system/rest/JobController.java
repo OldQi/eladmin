@@ -23,7 +23,6 @@ import me.zhengjie.exception.BadRequestException;
 import me.zhengjie.modules.system.domain.Job;
 import me.zhengjie.modules.system.service.JobService;
 import me.zhengjie.modules.system.service.dto.JobQueryCriteria;
-import me.zhengjie.utils.ThrowableUtil;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,7 +46,6 @@ public class JobController {
     private final JobService jobService;
     private static final String ENTITY_NAME = "job";
 
-    @Log("导出岗位数据")
     @ApiOperation("导出岗位数据")
     @GetMapping(value = "/download")
     @PreAuthorize("@el.check('job:list')")
@@ -55,7 +53,6 @@ public class JobController {
         jobService.download(jobService.queryAll(criteria), response);
     }
 
-    @Log("查询岗位")
     @ApiOperation("查询岗位")
     @GetMapping
     @PreAuthorize("@el.check('job:list','user:list')")

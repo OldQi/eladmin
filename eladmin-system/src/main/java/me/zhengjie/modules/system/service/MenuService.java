@@ -18,7 +18,7 @@ package me.zhengjie.modules.system.service;
 import me.zhengjie.modules.system.domain.Menu;
 import me.zhengjie.modules.system.service.dto.MenuDto;
 import me.zhengjie.modules.system.service.dto.MenuQueryCriteria;
-import me.zhengjie.modules.system.service.dto.RoleSmallDto;
+
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
@@ -59,12 +59,12 @@ public interface MenuService {
     void update(Menu resources);
 
     /**
-     * 获取待删除的菜单
+     * 获取所有子节点，包含自身ID
      * @param menuList /
      * @param menuSet /
      * @return /
      */
-    Set<Menu> getDeleteMenus(List<Menu> menuList, Set<Menu> menuSet);
+    Set<Menu> getChildMenus(List<Menu> menuList, Set<Menu> menuSet);
 
     /**
      * 构建菜单树

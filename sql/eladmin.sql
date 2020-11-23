@@ -509,7 +509,7 @@ CREATE TABLE `sys_role` (
 -- Records of sys_role
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_role` VALUES (1, '超级管理员', 1, '-', '自定义', NULL, 'admin', '2018-11-23 11:04:37', '2020-08-06 16:10:24');
+INSERT INTO `sys_role` VALUES (1, '超级管理员', 1, '-', '全部', NULL, 'admin', '2018-11-23 11:04:37', '2020-08-06 16:10:24');
 INSERT INTO `sys_role` VALUES (2, '普通用户', 2, '-', '自定义', NULL, 'admin', '2018-11-23 13:09:06', '2020-09-05 10:45:12');
 COMMIT;
 
@@ -528,8 +528,6 @@ CREATE TABLE `sys_roles_depts` (
 -- Records of sys_roles_depts
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_roles_depts` VALUES (1, 7);
-INSERT INTO `sys_roles_depts` VALUES (1, 8);
 INSERT INTO `sys_roles_depts` VALUES (2, 6);
 COMMIT;
 
@@ -549,74 +547,106 @@ CREATE TABLE `sys_roles_menus` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `sys_roles_menus` VALUES (1, 1);
-INSERT INTO `sys_roles_menus` VALUES (1, 2);
 INSERT INTO `sys_roles_menus` VALUES (2, 1);
-INSERT INTO `sys_roles_menus` VALUES (2, 2);
 INSERT INTO `sys_roles_menus` VALUES (3, 1);
-INSERT INTO `sys_roles_menus` VALUES (3, 2);
 INSERT INTO `sys_roles_menus` VALUES (5, 1);
-INSERT INTO `sys_roles_menus` VALUES (5, 2);
 INSERT INTO `sys_roles_menus` VALUES (6, 1);
-INSERT INTO `sys_roles_menus` VALUES (6, 2);
 INSERT INTO `sys_roles_menus` VALUES (7, 1);
-INSERT INTO `sys_roles_menus` VALUES (7, 2);
 INSERT INTO `sys_roles_menus` VALUES (9, 1);
-INSERT INTO `sys_roles_menus` VALUES (9, 2);
 INSERT INTO `sys_roles_menus` VALUES (10, 1);
-INSERT INTO `sys_roles_menus` VALUES (10, 2);
 INSERT INTO `sys_roles_menus` VALUES (11, 1);
-INSERT INTO `sys_roles_menus` VALUES (11, 2);
 INSERT INTO `sys_roles_menus` VALUES (14, 1);
-INSERT INTO `sys_roles_menus` VALUES (14, 2);
 INSERT INTO `sys_roles_menus` VALUES (15, 1);
-INSERT INTO `sys_roles_menus` VALUES (15, 2);
 INSERT INTO `sys_roles_menus` VALUES (18, 1);
-INSERT INTO `sys_roles_menus` VALUES (18, 2);
 INSERT INTO `sys_roles_menus` VALUES (19, 1);
-INSERT INTO `sys_roles_menus` VALUES (19, 2);
 INSERT INTO `sys_roles_menus` VALUES (21, 1);
-INSERT INTO `sys_roles_menus` VALUES (21, 2);
 INSERT INTO `sys_roles_menus` VALUES (22, 1);
-INSERT INTO `sys_roles_menus` VALUES (22, 2);
 INSERT INTO `sys_roles_menus` VALUES (23, 1);
-INSERT INTO `sys_roles_menus` VALUES (23, 2);
 INSERT INTO `sys_roles_menus` VALUES (24, 1);
-INSERT INTO `sys_roles_menus` VALUES (24, 2);
 INSERT INTO `sys_roles_menus` VALUES (27, 1);
-INSERT INTO `sys_roles_menus` VALUES (27, 2);
 INSERT INTO `sys_roles_menus` VALUES (28, 1);
-INSERT INTO `sys_roles_menus` VALUES (28, 2);
 INSERT INTO `sys_roles_menus` VALUES (30, 1);
 INSERT INTO `sys_roles_menus` VALUES (32, 1);
 INSERT INTO `sys_roles_menus` VALUES (33, 1);
-INSERT INTO `sys_roles_menus` VALUES (33, 2);
 INSERT INTO `sys_roles_menus` VALUES (34, 1);
-INSERT INTO `sys_roles_menus` VALUES (34, 2);
 INSERT INTO `sys_roles_menus` VALUES (35, 1);
-INSERT INTO `sys_roles_menus` VALUES (35, 2);
 INSERT INTO `sys_roles_menus` VALUES (36, 1);
-INSERT INTO `sys_roles_menus` VALUES (36, 2);
 INSERT INTO `sys_roles_menus` VALUES (37, 1);
-INSERT INTO `sys_roles_menus` VALUES (37, 2);
 INSERT INTO `sys_roles_menus` VALUES (38, 1);
-INSERT INTO `sys_roles_menus` VALUES (38, 2);
 INSERT INTO `sys_roles_menus` VALUES (39, 1);
-INSERT INTO `sys_roles_menus` VALUES (39, 2);
 INSERT INTO `sys_roles_menus` VALUES (41, 1);
+INSERT INTO `sys_roles_menus` VALUES (44, 1);
+INSERT INTO `sys_roles_menus` VALUES (45, 1);
+INSERT INTO `sys_roles_menus` VALUES (46, 1);
+INSERT INTO `sys_roles_menus` VALUES (48, 1);
+INSERT INTO `sys_roles_menus` VALUES (49, 1);
+INSERT INTO `sys_roles_menus` VALUES (50, 1);
+INSERT INTO `sys_roles_menus` VALUES (52, 1);
+INSERT INTO `sys_roles_menus` VALUES (53, 1);
+INSERT INTO `sys_roles_menus` VALUES (54, 1);
+INSERT INTO `sys_roles_menus` VALUES (56, 1);
+INSERT INTO `sys_roles_menus` VALUES (57, 1);
+INSERT INTO `sys_roles_menus` VALUES (58, 1);
+INSERT INTO `sys_roles_menus` VALUES (60, 1);
+INSERT INTO `sys_roles_menus` VALUES (61, 1);
+INSERT INTO `sys_roles_menus` VALUES (62, 1);
+INSERT INTO `sys_roles_menus` VALUES (64, 1);
+INSERT INTO `sys_roles_menus` VALUES (65, 1);
+INSERT INTO `sys_roles_menus` VALUES (66, 1);
+INSERT INTO `sys_roles_menus` VALUES (73, 1);
+INSERT INTO `sys_roles_menus` VALUES (74, 1);
+INSERT INTO `sys_roles_menus` VALUES (75, 1);
+INSERT INTO `sys_roles_menus` VALUES (77, 1);
+INSERT INTO `sys_roles_menus` VALUES (78, 1);
+INSERT INTO `sys_roles_menus` VALUES (79, 1);
 INSERT INTO `sys_roles_menus` VALUES (80, 1);
-INSERT INTO `sys_roles_menus` VALUES (80, 2);
 INSERT INTO `sys_roles_menus` VALUES (82, 1);
 INSERT INTO `sys_roles_menus` VALUES (83, 1);
-INSERT INTO `sys_roles_menus` VALUES (83, 2);
 INSERT INTO `sys_roles_menus` VALUES (90, 1);
-INSERT INTO `sys_roles_menus` VALUES (90, 2);
 INSERT INTO `sys_roles_menus` VALUES (92, 1);
-INSERT INTO `sys_roles_menus` VALUES (92, 2);
 INSERT INTO `sys_roles_menus` VALUES (93, 1);
 INSERT INTO `sys_roles_menus` VALUES (94, 1);
 INSERT INTO `sys_roles_menus` VALUES (97, 1);
 INSERT INTO `sys_roles_menus` VALUES (98, 1);
+INSERT INTO `sys_roles_menus` VALUES (102, 1);
+INSERT INTO `sys_roles_menus` VALUES (103, 1);
+INSERT INTO `sys_roles_menus` VALUES (104, 1);
+INSERT INTO `sys_roles_menus` VALUES (105, 1);
+INSERT INTO `sys_roles_menus` VALUES (106, 1);
+INSERT INTO `sys_roles_menus` VALUES (107, 1);
+INSERT INTO `sys_roles_menus` VALUES (108, 1);
+INSERT INTO `sys_roles_menus` VALUES (109, 1);
+INSERT INTO `sys_roles_menus` VALUES (110, 1);
+INSERT INTO `sys_roles_menus` VALUES (111, 1);
+INSERT INTO `sys_roles_menus` VALUES (112, 1);
+INSERT INTO `sys_roles_menus` VALUES (113, 1);
+INSERT INTO `sys_roles_menus` VALUES (114, 1);
 INSERT INTO `sys_roles_menus` VALUES (116, 1);
+INSERT INTO `sys_roles_menus` VALUES (120, 1);
+INSERT INTO `sys_roles_menus` VALUES (1, 2);
+INSERT INTO `sys_roles_menus` VALUES (2, 2);
+INSERT INTO `sys_roles_menus` VALUES (6, 2);
+INSERT INTO `sys_roles_menus` VALUES (7, 2);
+INSERT INTO `sys_roles_menus` VALUES (9, 2);
+INSERT INTO `sys_roles_menus` VALUES (10, 2);
+INSERT INTO `sys_roles_menus` VALUES (11, 2);
+INSERT INTO `sys_roles_menus` VALUES (14, 2);
+INSERT INTO `sys_roles_menus` VALUES (15, 2);
+INSERT INTO `sys_roles_menus` VALUES (19, 2);
+INSERT INTO `sys_roles_menus` VALUES (21, 2);
+INSERT INTO `sys_roles_menus` VALUES (22, 2);
+INSERT INTO `sys_roles_menus` VALUES (23, 2);
+INSERT INTO `sys_roles_menus` VALUES (24, 2);
+INSERT INTO `sys_roles_menus` VALUES (27, 2);
+INSERT INTO `sys_roles_menus` VALUES (30, 2);
+INSERT INTO `sys_roles_menus` VALUES (32, 2);
+INSERT INTO `sys_roles_menus` VALUES (33, 2);
+INSERT INTO `sys_roles_menus` VALUES (34, 2);
+INSERT INTO `sys_roles_menus` VALUES (36, 2);
+INSERT INTO `sys_roles_menus` VALUES (80, 2);
+INSERT INTO `sys_roles_menus` VALUES (82, 2);
+INSERT INTO `sys_roles_menus` VALUES (83, 2);
+INSERT INTO `sys_roles_menus` VALUES (116, 2);
 COMMIT;
 
 -- ----------------------------
@@ -656,7 +686,7 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `sys_user` VALUES (1, 2, 'admin', '管理员', '男', '18888888888', '201507802@qq.com', 'avatar-20200806032259161.png', '/Users/jie/Documents/work/me/admin/eladmin/~/avatar/avatar-20200806032259161.png', '$2a$10$Egp1/gvFlt7zhlXVfEFw4OfWQCGPw0ClmMcc6FjTnvXNRVf9zdMRa', b'1', 1, NULL, 'admin', '2020-05-03 16:38:31', '2018-08-23 09:11:56', '2020-09-05 10:43:31');
-INSERT INTO `sys_user` VALUES (2, 2, 'test', '测试', '男', '18888888888', '231@qq.com', NULL, NULL, '$2a$10$4XcyudOYTSz6fue6KFNMHeUQnCX5jbBQypLEnGk1PmekXt5c95JcK', b'0', 1, 'admin', 'admin', NULL, '2020-05-05 11:15:49', '2020-09-05 10:43:38');
+INSERT INTO `sys_user` VALUES (2, 2, 'test', '测试', '男', '19999999999', '231@qq.com', NULL, NULL, '$2a$10$4XcyudOYTSz6fue6KFNMHeUQnCX5jbBQypLEnGk1PmekXt5c95JcK', b'0', 1, 'admin', 'admin', NULL, '2020-05-05 11:15:49', '2020-09-05 10:43:38');
 COMMIT;
 
 -- ----------------------------

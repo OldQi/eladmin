@@ -33,7 +33,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,7 +49,6 @@ public class DictDetailController {
     private final DictDetailService dictDetailService;
     private static final String ENTITY_NAME = "dictDetail";
 
-    @Log("查询字典详情")
     @ApiOperation("查询字典详情")
     @GetMapping
     public ResponseEntity<Object> query(DictDetailQueryCriteria criteria,
@@ -58,7 +56,6 @@ public class DictDetailController {
         return new ResponseEntity<>(dictDetailService.queryAll(criteria,pageable),HttpStatus.OK);
     }
 
-    @Log("查询多个字典详情")
     @ApiOperation("查询多个字典详情")
     @GetMapping(value = "/map")
     public ResponseEntity<Object> getDictDetailMaps(@RequestParam String dictName){

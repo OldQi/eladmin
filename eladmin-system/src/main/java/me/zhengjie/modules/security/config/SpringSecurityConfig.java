@@ -40,7 +40,6 @@ import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
-
 import java.util.*;
 
 /**
@@ -50,7 +49,7 @@ import java.util.*;
 @EnableWebSecurity
 @RequiredArgsConstructor
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final TokenProvider tokenProvider;
     private final CorsFilter corsFilter;
@@ -76,7 +75,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         // 搜寻匿名标记 url： @AnonymousAccess
-        Map<RequestMappingInfo, HandlerMethod> handlerMethodMap = applicationContext.getBean(RequestMappingHandlerMapping.class).getHandlerMethods();
+        RequestMappingHandlerMapping requestMappingHandlerMapping = (RequestMappingHandlerMapping) applicationContext.getBean("requestMappingHandlerMapping");
+        Map<RequestMappingInfo, HandlerMethod> handlerMethodMap = requestMappingHandlerMapping.getHandlerMethods();
         // 获取匿名标记
         Map<String, Set<String>> anonymousUrls = getAnonymousUrl(handlerMethodMap);
         httpSecurity
@@ -137,6 +137,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().apply(securityConfigurerAdapter());
     }
 
+    private TokenConfigurer securityConfigurerAdapter() {
+        return new TokenConfigurer(tokenProvider, properties, onlineUserService, userCacheClean);
+    }
+
     private Map<String, Set<String>> getAnonymousUrl(Map<RequestMappingInfo, HandlerMethod> handlerMethodMap) {
         Map<String, Set<String>> anonymousUrls = new HashMap<>(6);
         Set<String> get = new HashSet<>();
@@ -180,9 +184,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         anonymousUrls.put(RequestMethodEnum.DELETE.getType(), delete);
         anonymousUrls.put(RequestMethodEnum.ALL.getType(), all);
         return anonymousUrls;
-    }
-
-    private TokenConfigurer securityConfigurerAdapter() {
-        return new TokenConfigurer(tokenProvider, properties, onlineUserService, userCacheClean);
     }
 }

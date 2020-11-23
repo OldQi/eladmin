@@ -21,7 +21,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.zhengjie.annotation.Log;
 import me.zhengjie.annotation.rest.AnonymousDeleteMapping;
 import me.zhengjie.annotation.rest.AnonymousGetMapping;
 import me.zhengjie.annotation.rest.AnonymousPostMapping;
@@ -71,7 +70,6 @@ public class AuthorizationController {
     @Resource
     private LoginProperties loginProperties;
 
-    @Log("用户登录")
     @ApiOperation("登录授权")
     @AnonymousPostMapping(value = "/login")
     public ResponseEntity<Object> login(@Validated @RequestBody AuthUserDto authUser, HttpServletRequest request) throws Exception {
